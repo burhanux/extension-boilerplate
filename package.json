@@ -1,0 +1,45 @@
+{
+  "name": "extension-boilerplate",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "env-cmd -e development npm run build",
+    "test": "env-cmd -e test npm run build",
+    "staging": "env-cmd -e staging npm run build",
+    "prod": "env-cmd -e production npm run build",
+    "start:dev": "env-cmd -e development vite",
+    "start:test": "env-cmd -e test vite",
+    "start:staging": "env-cmd -e staging vite",
+    "start:prod": "env-cmd -e production vite",
+    "build": "rm -rf dist/ && tsc -b && vite build && vite build --mode content && vite build --mode background",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.10",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "env-cmd": "^10.1.0",
+    "lucide-react": "^0.514.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^24.0.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "tw-animate-css": "^1.3.4",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
+  }
+}
